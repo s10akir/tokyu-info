@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    image: node
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/working
+    working_dir: /working
+    user: 1000:1000
+    command: npm start
